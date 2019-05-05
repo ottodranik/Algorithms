@@ -1,0 +1,144 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.charts {
+  width: 100%;
+  margin-top: 45px;
+}
+
+.array-cnt {
+  border: 1px solid #999;
+  padding: 10px 20px;
+  color: #333;
+}
+
+.array-cnt > div {
+  margin-bottom: 10px;
+}
+.array-cnt > div:last-child {
+  margin-bottom: 0;
+}
+
+.array-input, .array-values {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+.array-values {
+  height: 50px;
+  resize: none;
+}
+
+textarea:disabled, input:disabled {
+  background-color: #ccc;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.button.addArray {
+  background-color: blue;
+}
+
+.button.initArray {
+  background-color: green;
+}
+
+.button.initCharts {
+  background-color: blueviolet;
+}
+
+.button.closeBtn {
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 25px;
+  padding: 0;
+  color: #000;
+  outline: none;
+}
+
+.button.closeBtn:before {
+  content: "▲";
+}
+
+#controls.collapse .button.closeBtn:before {
+  content: "▼";
+}
+
+#controls {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(192, 202, 211);
+}
+
+#controls.collapse {
+  height: 43px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+/* laba2 */
+.equation-cnt {
+  border: 1px solid #999;
+  padding: 10px 20px 0px;
+  margin-top: 10px;
+}
+
+.equation {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.simple-text {
+  margin-top: 10px;
+}
+
+.input {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  width: 50px;
+  border: 1px solid #333;
+}
+
+.input-data-table span:before{
+  content: "|";
+}
+
+#init-data, #results-data {
+  padding: 10px;
+}

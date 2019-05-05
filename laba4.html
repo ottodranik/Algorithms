@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="./vendor/c3.css" rel="stylesheet" />
+  <link href="./style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="controls" data-collapse="false">
+    <button id="gausse1" type="button" class="button addArray" onClick="main(true)" disabled>С нормализацией</button>
+    <button id="gausse2" type="button" class="button addArray" onClick="main()" disabled>Без нормализации (только з последовательным исключением)</button>
+    <button class="button closeBtn" onClick="toggleControls()"></button>
+    <form name="controls" id="controlsForm">
+      <div class="array-cnt">
+        <div>
+          Выберите тип инициализации системы уравнений:
+          <br><input type="radio" name="random" value="1" onClick="setCustomOrNot(1)"> Самому ввести массив
+          <br><input type="radio" name="random" value="0" onClick="setCustomOrNot(0)" checked> Дефолтный массив
+        </div>
+        <div>
+          Введите количество уравнений (максимум 5):
+          <input id="amount" class="input" disabled>
+          <button id="buttonBuildTable" type="button" class="button initArray" onClick="buildArray()" disabled>Создать таблицу</button>
+        </div>
+        Введите значения массива самостоятельно:
+        <div id="input-data-table"></div>
+        <div>
+          <button id="buttonCustom" type="button" class="button initArray" onClick="init()">Инициализировать</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="init-data"></div>
+  <div id="results-data"></div>
+  <script src="./vendor/d3-5.8.2.min.js"></script>
+  <script src="./vendor/c3.min.js"></script>
+  <script type="text/javascript">
+    process = null;
+ </script>
+  <script src="./serialize.js"></script>
+  <script src="./laba4.js"></script>
+</body>
+</html>

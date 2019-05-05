@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="./vendor/c3.css" rel="stylesheet" />
+  <link href="./style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="controls" data-collapse="false">
+    <button type="button" class="button addArray" onClick="main()">Построить</button>
+    <button class="button closeBtn" onClick="toggleControls()"></button>
+    <form name="controls" id="controlsForm">
+      <div class="array-cnt">
+        <div>
+          Выберите функцию:<br>
+          <select id="functionId">
+            <option value="1">y = 1 / (0.5 + x^2)</option>
+            <option value="2">y = a + (b - a) / 10 * i, де i = 1..10</option>
+          </select>
+        </div>
+        <div>
+          Введите границы интервала массива:<br>
+          a <input id="inputA" class="input">
+          b <input id="inputB" class="input">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="charts">
+    <h3>Графік функції.</h3>
+    <div id="chart-theory"></div>
+    <h3>Графік інтерполяції за Лагранжем.</h3>
+    <div id="chart-perfomance"></div>
+  </div>
+  <script src="./vendor/d3-5.8.2.min.js"></script>
+  <script src="./vendor/c3.min.js"></script>
+  <script src="./laba3.js"></script>
+</body>
+</html>
