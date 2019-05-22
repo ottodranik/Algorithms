@@ -10,7 +10,12 @@ body, html {
 
 .charts {
   width: 100%;
-  margin-top: 45px;
+  padding: 10px;
+  display: flex;
+}
+
+.chart-cnt {
+  width: 50%;
 }
 
 .array-cnt {
@@ -28,9 +33,6 @@ body, html {
 
 .array-input, .array-values {
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #333;
 }
 
 .array-values {
@@ -131,7 +133,7 @@ input[type="radio"] {
   padding: 10px;
   margin: 5px;
   border-radius: 5px;
-  width: 50px;
+  width: 100px;
   border: 1px solid #333;
 }
 

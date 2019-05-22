@@ -8,37 +8,35 @@
 </head>
 <body>
   <div id="controls" data-collapse="false">
-    <button id="gausse1" type="button" class="button addArray" onClick="main(true)" disabled>С нормализацией</button>
-    <button id="gausse2" type="button" class="button addArray" onClick="main()" disabled>Без нормализации (только з последовательным исключением)</button>
+    <button type="button" class="button addArray" onClick="main()">Построить</button>
     <button class="button closeBtn" onClick="toggleControls()"></button>
     <form name="controls" id="controlsForm">
       <div class="array-cnt">
         <div>
-          Выберите тип инициализации системы уравнений:
-          <br><input type="radio" name="random" value="1" onClick="setCustomOrNot(1)"> Самому ввести массив
-          <br><input type="radio" name="random" value="0" onClick="setCustomOrNot(0)" checked> Дефолтный массив
+          Выберите функцию:<br>
+          <select id="functionId">
+            <option value="3">y = 10 * arctg(5 - x) - 1</option>
+          </select>
         </div>
         <div>
-          Введите количество уравнений (максимум 5):
-          <input id="amount" class="input" disabled>
-          <button id="buttonBuildTable" type="button" class="button initArray" onClick="buildArray()" disabled>Создать таблицу</button>
-        </div>
-        Введите значения массива самостоятельно:
-        <div id="input-data-table"></div>
-        <div>
-          <button id="buttonCustom" type="button" class="button initArray" onClick="init()">Инициализировать</button>
+          Введите границы интервала массива:<br>
+          a <input id="inputA" class="input">
+          b <input id="inputB" class="input">
         </div>
       </div>
     </form>
   </div>
-  <div id="init-data"></div>
-  <div id="results-data"></div>
+  <div class="charts">
+    <div class="chart-cnt">
+      <h3>Графік функції. Графік інтерполяції за Лагранжем.</h3>
+      <div id="chart"></div>
+    </div>
+    <table id="kTable"></table>
+  </div>
   <script src="./vendor/d3-5.8.2.min.js"></script>
   <script src="./vendor/c3.min.js"></script>
-  <script type="text/javascript">
-    process = null;
- </script>
-  <script src="./serialize.js"></script>
+  <script src="./scripts.js"></script>
+  <script src="./laba3.js"></script>
   <script src="./laba4.js"></script>
 </body>
 </html>
